@@ -2,7 +2,6 @@
   --col1: #2f2fa2;
   --col2: white;
 }
-
 a{
     text-decoration: none;
     color: inherit;
@@ -39,6 +38,9 @@ body{
 #container{
   margin: 0;
   padding: 0;
+}
+.menu{
+  display: none;
 }
 .listcontainer{
     width: 100%;
@@ -425,13 +427,35 @@ font-size: 1.2rem;
 }
 
 @media only screen and (max-width: 576px) {
+  .nav{
+    background-color: rgba(0,0,0,0.7);
+  }
+  .menu{
+    display: block;
+    font-size: 3rem;
+    padding: 0 1rem;
+    border: none;
+    background: none;
+  }
+  .menu span{
+    padding:0 1rem;
+  }
+  .listcontainer{
+    position: relative;
+    background: none;
+  }
+  .on{
+    display: block;
+  }
+  .off{
+    display: none;
+  }
   .listcontainer ul{
     flex-flow:column wrap;
     width:100%;
     align-items: center;
     margin:0;
     padding:1rem 0;
-    display: none;
   }
   .listcontainer ul li{
     margin-bottom:1rem;
@@ -480,7 +504,7 @@ font-size: 1.2rem;
     padding: 1rem 1rem;
   }
   #contact{
-    padding: 0;
+    padding: 0.5rem;
     margin: 0;
   }
   #contactdetails{
@@ -498,5 +522,17 @@ font-size: 1.2rem;
   } 
   #footer #follow{
     width: 100%;
+  }
+  #footer #second{
+    flex-flow: column-reverse wrap;
+    padding: 0;
+  } 
+  #footer #second *{
+    text-align: center;
+  }
+  #credits{
+    margin-top: 0.5rem;
+    width:100%;
+    display: inline;
   }
 }
