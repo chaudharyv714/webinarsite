@@ -1,5 +1,5 @@
 :root{
-  --col1: grey;
+  --col1: #2f2fa2;
   --col2: white;
 }
 
@@ -87,14 +87,16 @@ body{
 
 }
 #home{
+  margin-top: auto;
   background:transparent;
   min-height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 #homecontent{
   display: flex;
   flex-flow: row wrap;
-  height:100vh;
+  min-height:100vh;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -172,7 +174,8 @@ display: inline;
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
-  border: 1px solid var(--col2);
+  background:white;
+  border: 1px solid var(--col1);
   margin-left: 1rem;
   padding:4rem 2rem;
   box-shadow: 2px 4px var(--col1);
@@ -206,10 +209,15 @@ display: inline;
 
 .scheduleone,.scheduletwo{
   background:white;
+  border: 1px solid var(--col1);
   flex:1;
   margin:1rem 2rem;
   padding:1rem 4rem;
   text-align: center;
+}
+
+.scheduleone h2,.scheduletwo h2{
+  color:var(--col1);
 }
 .scheduleone:hover,.scheduletwo:hover{
   z-index: 999;
@@ -256,6 +264,9 @@ font-size: 1.2rem;
 .carddetails{
   flex:2;
   padding:2rem
+}
+.carddetails h2{
+  color:var(--col1);
 }
 .carddetails p{
   font-weight: lighter;
@@ -413,3 +424,79 @@ font-size: 1.2rem;
     justify-content: space-around;
 }
 
+@media only screen and (max-width: 576px) {
+  .listcontainer ul{
+    flex-flow:column wrap;
+    width:100%;
+    align-items: center;
+    margin:0;
+    padding:1rem 0;
+    display: none;
+  }
+  .listcontainer ul li{
+    margin-bottom:1rem;
+  }
+  #about{
+    margin-top: 3rem;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  #about .con{
+    padding: 0;
+  }
+  #topics{
+    padding: 0;
+    margin: 0;
+  }
+  #topics .one{
+    margin: 0;
+  }
+  #topics .one .contentcard{
+    margin: 1rem 0;
+  }
+  .schedule{
+    padding: 0;
+    margin: 0;
+  }
+  .scheduleone,.scheduletwo{
+    padding:0;
+  }
+  .card{
+    padding: 0;
+    margin: 1rem 0;
+    flex-direction: column;
+  }
+  .card *{
+    flex: 1;
+  }
+  .card .cardimage{
+    margin: 4rem 0;
+  }
+  .committee{
+    margin: 0;
+    padding: 0.5rem;
+  }
+  .committeecards{
+    padding: 1rem 1rem;
+  }
+  #contact{
+    padding: 0;
+    margin: 0;
+  }
+  #contactdetails{
+   flex-flow: column wrap;
+  }
+  .contactcardfirst,.contactcardsecond h3{
+    text-align: center;
+  }
+  #footer #first{
+   flex-flow:column wrap;
+   align-items: center;
+  } 
+  #footer #first *{
+    margin-bottom: 1rem;
+  } 
+  #footer #follow{
+    width: 100%;
+  }
+}

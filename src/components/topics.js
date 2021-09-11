@@ -4,7 +4,6 @@ function topics(){
     return(
         <div id="topics">
             <div className="one">
-
                     <div className="contentcard">
                         <span><i className="bg fas fa-drum-steelpan"></i></span>
                         <h2>Topics</h2>
