@@ -1,38 +1,415 @@
-.App {
+:root{
+  --col1: grey;
+  --col2: white;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+} 
+.bg{
+  background-color: var(--col1);
+  color: var(--col2);
+  font-size: 3rem;
+  padding:0.5rem 1rem;
+  margin-right:0.5rem;
+}
+.line{
+  margin-left: 1rem;
+  color:transparent;
+  text-decoration:line-through;
+  text-decoration-color: var(--col1);
+}
+ul{
+  list-style:none;
+}
+ul li::before{
+content:"\2022";
+color:var(--col1);
+font-weight: bolder;
+display: inline-block;
+width:1rem;
+margin-right: 0.5rem;
+}
+body{
+  padding: 0;
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#container{
+  margin: 0;
+  padding: 0;
+}
+.listcontainer{
+    width: 100%;
+    position: fixed;
+    top:0;
+    display:block;
+    margin:auto;
+    background-color: rgba(0,0,0,0.7);
+    padding:0.5rem 0;
+    margin-bottom: 4rem;;
+  }
+.listcontainer ul{
+    display:flex;
+    flex-flow:row wrap;
+    width:60%;
+    height: auto;
+    margin: auto;
+    justify-content: space-evenly;
+    list-style: none;
+    font-weight: 200;
+    font-size: 1.2rem;
+    color:white;
+    list-style: none;
+}
+.listcontainer ul li:first-child{
+    text-decoration: underline;
+}   
+.listcontainer ul li{
+    flex: 1;
+}
+.listcontainer ul li::before{
+  content: none;
+}
+.listcontainer ul li:hover{
+    color:grey;
+    font-size: 1.5rem;
+}
+
+body{
+  display: block;
+  background-image: url(nitc.jpg);
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+#home{
+  background:transparent;
+  min-height: 100vh;
+  width: 100vw;
+}
+#homecontent{
+  display: flex;
+  flex-flow: row wrap;
+  height:100vh;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#homecontent img,div{
+  flex:1
+}  
+#homecontent img{
+  max-width:200px;
+} 
+.homelogo{
+  filter: invert(100%);
+  max-width:200px;
+}
+#homecontent div{
+  border:1px solid black;
+  color:white;
+  text-shadow: 1px 1px black;
+  max-width: 500px;
+  padding:1rem;
+  font-size: 1.5rem;
+  text-align: center;
+} 
+.wrapper{
+  background:white;
+}
+
+#about{
+  padding:2rem;
+  margin:2rem;
+  display:flex;
+  flex-flow: row wrap;
+}
+#about .con{
+  flex:1;
+  padding:2rem;
+}
+#about .con .content{
+  margin-bottom: 4em;
+}
+#about .con p{
+  padding-left: 2em;
+}
+#about .con .content span i,h3{
+display: inline;
+}
+#about .con .content span i{
+  padding-right: 1rem;
+  font-size: 2rem;
+  }
+#about .image{
+  flex:1;
+}
+#about .image img{
+  display: block;
+  margin: auto;
+  width:100%;
+}
+
+#topics{
+  padding:2rem;
+  margin:2rem;
+  align-items: center;
+}
+#topics .one{
+  flex:2;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: space-between;
+  padding: 1rem;
+  margin:1rem 3rem;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.contentcard{
+  flex:1;
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  border: 1px solid var(--col2);
+  margin-left: 1rem;
+  padding:4rem 2rem;
+  box-shadow: 2px 4px var(--col1);
+}
+.contentcard:hover{
+  z-index: 999;
+  position:relative;
+  top:-1rem;
+  left:-1rem;
+  height:auto;
+  display:block;
+  transform: scale(1.2);
+
+}
+.contactcard *{
+  flex:1;
+  padding: 1rem 2rem;
+}
+
+
+.schedule{
+  display: flex;
+  flex-flow: row wrap;
+  padding:2rem;
+  margin:2rem;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color:black;
+  text-shadow: 1px 1px grey;
+  align-items: stretch;
 }
 
-.App-link {
-  color: #61dafb;
+.scheduleone,.scheduletwo{
+  background:white;
+  flex:1;
+  margin:1rem 2rem;
+  padding:1rem 4rem;
+  text-align: center;
+}
+.scheduleone:hover,.scheduletwo:hover{
+  z-index: 999;
+  position:relative;
+  top:-1rem;
+  left:-1rem;
+  height:auto;
+  display:block;
+  transform: scale(1.2);
+
+}
+.applylink{
+padding: 0.5rem 1rem;
+margin-bottom: 1rem;
+background-color: var(--col1);
+color: var(--col2);
+border-radius:0.5rem;
+font-weight: bolder;
+font-size: 1.2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+
+
+
+
+
+
+.card{
+  padding:2rem;
+  margin:4rem;
+  display:flex;
+  flex-flow: row wrap;
 }
+.cardimage{
+  flex :1;
+}
+.cardimage img{
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+.carddetails{
+  flex:2;
+  padding:2rem
+}
+.carddetails p{
+  font-weight: lighter;
+}
+
+
+
+
+
+
+.committee{
+  padding:2rem;
+  margin:2rem;
+}
+.committeecards{
+  padding: 1rem 5rem;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: space-around;
+
+}
+.contactinfo{
+  flex:1 1 15vw;
+  border: 1px solid black;
+  margin:1rem;
+  padding:1rem;
+  padding-left: 5rem;
+  padding-bottom: 2rem;
+  background-color: var(--col1);
+  color:var(--col2);
+} 
+.contactinfo h3{
+  margin-bottom: 2rem;
+  text-decoration: underline;
+}
+.contactinfo p{
+  margin-bottom:-1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+#contact{
+  padding:2rem;
+  margin:2rem;
+}
+
+#contactdetails{
+  display: flex;
+  flex-flow: row wrap;
+}
+.contactcard{
+  flex:1;
+  flex-basis: 30vw;
+  display:flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.contactcardfirst{
+  flex: 1;
+  font-size: 3em;
+}
+.contactcardsecond{
+  flex: 4;
+}
+.contactcardsecond h3,a{
+  display: block;
+
+}
+
+
+
+
+
+
+
+
+#footer{
+    background-color: black;
+    color: cornsilk;
+    display: flex;
+    flex-flow: column wrap;
+}
+#footer #first{
+    flex:10;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items:flex-start ;
+    padding: 5rem 1rem;
+
+}
+#footer #first #log-box{
+    text-align: left;
+    padding-left: 2rem;
+} 
+#footer #first #follow{
+    flex:1;
+    text-align: center;
+} 
+#footer #first #call{
+    flex:1;
+    text-align:left;
+} 
+
+
+#footer #first #follow div{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+} 
+#footer #first #follow div a{
+    font-size: 2.5rem;
+}
+#footer #first #call a{
+    font-size: 2rem;
+}
+.footext{
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+.whitebr{
+    display: block;
+    width:90vw;
+    margin: auto;
+    border-top: 1px solid wheat;
+}
+#footer #second{
+    flex:4;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding:0.7rem;
+    padding-left: 2rem;
+    font-size: 1.2rem;
+}
+#footer #second #credits{
+    flex:1;
+    font-size: 1rem;
+    text-align:left;
+    padding-left:2rem ;
+}  
+ 
+#footer #second #pptc{
+    flex:1;
+    display:flex;
+    justify-content: space-around;
+}
+
