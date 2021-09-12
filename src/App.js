@@ -21,9 +21,7 @@ function App() {
       </div>
       <Schedule />
       <div className="wrapper">
-        <Card url="rajpath.jpg" head="title" text=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur amet natus eligendi suscipit nesciunt, esse quasi! Ad tenetur, iusto ipsum ab sit necessitatibus quia, consequatur facere, blanditiis eum impedit voluptatem!" />
-        <Card url="rajpath.jpg" head="title" text=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur amet natus eligendi suscipit nesciunt, esse quasi! Ad tenetur, iusto ipsum ab sit necessitatibus quia, consequatur facere, blanditiis eum impedit voluptatem!" />
-        <Card url="rajpath.jpg" head="title" text=" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur amet natus eligendi suscipit nesciunt, esse quasi! Ad tenetur, iusto ipsum ab sit necessitatibus quia, consequatur facere, blanditiis eum impedit voluptatem!" />
+        <Card/>
       </div>
       <div className="wrapper">
         <Orgcommittee />
