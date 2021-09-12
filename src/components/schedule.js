@@ -2,7 +2,7 @@ import '../App.css';
 
 function schedule(){
     return(
-        <div className="schedule">
+        <div id="schedule" className="schedule">
             <div className="scheduleone">
                 <h2>Schedule</h2>
                 <ul>

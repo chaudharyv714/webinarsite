@@ -3,7 +3,7 @@ import Card from './contactinfo';
 
 function committee(){
     return(
-        <div className="committee">
+        <div id="committee" className="committee">
             <h4>COMMITTEE <span className="line">asdfghjkzghjk</span>  </h4>
             <h2>ORGANISING COMMITTEE</h2>
             <div className="committeecards">
